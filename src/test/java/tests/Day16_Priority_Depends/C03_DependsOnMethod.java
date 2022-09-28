@@ -1,4 +1,4 @@
-package tests.Day16;
+package tests.Day16_Priority_Depends;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.TestBaseBeforeMethodAfterMethod;
 
-public class C03_DepensOnMethod extends TestBaseBeforeMethodAfterMethod {
+public class C03_DependsOnMethod extends TestBaseBeforeMethodAfterMethod {
     @Test
     public void test1() {
         // amazon ana sayfasına gidelim

@@ -1,21 +1,22 @@
-package tests.Day16;
+package tests.Day16_Priority_Depends;
 
 import org.testng.annotations.Test;
-import utilities.TestBaseBeforeClassAfterClass;
 import utilities.TestBaseBeforeMethodAfterMethod;
 
-public class C03_Priority_Oncelik extends TestBaseBeforeMethodAfterMethod {
-    @Test (priority = -6)
+public class C01_BeforeMethodAfterMethod extends TestBaseBeforeMethodAfterMethod {
+    @Test
     public void amazonTesti() {
         driver.get("https://amazon.com");
     }
 
-    @Test(priority = -4)
+    @Test
     public void bestbuyTesti() {
         driver.get("https://bestbuy.com");
     }
-    @Test(priority = 1)
+    @Test
     public void techProTesti() {
         driver.get("https://techproeducation.com");
     }
+
+
 }

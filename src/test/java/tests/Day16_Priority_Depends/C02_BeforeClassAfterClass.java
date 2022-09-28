@@ -1,9 +1,9 @@
-package tests.Day16;
+package tests.Day16_Priority_Depends;
 
 import org.testng.annotations.Test;
-import utilities.TestBaseBeforeMethodAfterMethod;
+import utilities.TestBaseBeforeClassAfterClass;
 
-public class C01_BeforeMethodAfterMethod extends TestBaseBeforeMethodAfterMethod {
+public class C02_BeforeClassAfterClass extends TestBaseBeforeClassAfterClass {
     @Test
     public void amazonTesti() {
         driver.get("https://amazon.com");
@@ -17,6 +17,4 @@ public class C01_BeforeMethodAfterMethod extends TestBaseBeforeMethodAfterMethod
     public void techProTesti() {
         driver.get("https://techproeducation.com");
     }
-
-
 }
