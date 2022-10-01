@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class FacebookPage {
+public class Facebook_Page {
 
-   public FacebookPage(){
+   public Facebook_Page(){
        PageFactory.initElements(Driver.getDriver(),this);
    }
     //email
