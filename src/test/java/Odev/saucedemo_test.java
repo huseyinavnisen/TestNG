@@ -1,4 +1,4 @@
-package tests.Odev;
+package Odev;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

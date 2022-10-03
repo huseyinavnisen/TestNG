@@ -1,31 +1,38 @@
 package utilities;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+
 public abstract class TestBaseBeforeMethodAfterMethod {
     protected WebDriver driver;
+    protected Actions actions;
     protected String tarih;
+    // TestNG framework'unde before ve after notasyonlari yerine
+    // @BeforeMethod ve @AfterMetyhod kullanilir
+    // Calisma prensibi Junit'deki before-after ile aynidir
     @BeforeMethod
-    public void setUp() {
+    public void setUp(){
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        actions = new Actions(driver);
 
-        LocalDateTime date = LocalDateTime.now();
-        DateTimeFormatter formater = DateTimeFormatter.ofPattern("YYMMddHH");
-        tarih = date.format(formater);
+        LocalDateTime date=LocalDateTime.now();
+        DateTimeFormatter formater=DateTimeFormatter.ofPattern("YYMMddHHmmss");
+        tarih=date.format(formater);
+
     }
     @AfterMethod
-    public void tearDown() throws InterruptedException {
-        Thread.sleep(3000);
-        // driver.quit();
+    public void tearDown(){
+        //driver.close();
     }
 }

@@ -8,8 +8,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
-
 public class Driver {
+    private Driver(){ // getDriver() methoduna ulaşılasın singlepatern olsun diye private yaptık. isteğe bağlı
+    }
     static WebDriver driver;
     public static WebDriver getDriver() {
         // testi her çalıştırdığında her sefer yeni driver açmasın, hepsi için tek driverda tüm
@@ -42,17 +43,14 @@ public class Driver {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         return driver;
+
     }
-
-
     public static void closeDriver() {
         if (driver!= null) {
             driver.close();
             driver=null; // kapandıktan sonra, yeni driver açmalarda getDriver methodunun doğru çalışması için
         }
-
     }
-
 
     public static void quitDriver() {
         if (driver!= null) {

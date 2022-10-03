@@ -25,6 +25,29 @@ public class HotelMyCamp_Page {
     @FindBy(xpath = "//*[text()='Try again please']")
     public WebElement girisYapilamadi;
 
+    @FindBy(xpath = "//*[@id='UserName']")
+    public WebElement userName;
+
+    @FindBy(xpath = "//a[@id='menuHotels']")
+    public WebElement hotelManagement;
+
+    @FindBy(xpath = "(//a[@href='/admin/RoomReservationAdmin'])[1]")
+    public WebElement roomReservation;
+
+    @FindBy(xpath = "//span[@class='hidden-480']")
+    public WebElement addRoom;
+
+    @FindBy (xpath= "//select[@id='IDUser']")
+    public WebElement idUser;
+
+    @FindBy (xpath = "//select[@id='IDHotelRoom']")
+    public WebElement hotelRoom;
+
+    @FindBy (xpath= "//div[@class='bootbox-body']")
+    public WebElement roomReservationText;
+
+    @FindBy (xpath = "//button[@data-bb-handler='ok']")
+    public WebElement okButton;
 
 
 }
