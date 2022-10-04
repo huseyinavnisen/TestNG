@@ -1,16 +1,18 @@
-package tests.Day18_POM;
+package tests.TESTLERIM;
 
 import com.github.javafaker.Faker;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.Facebook_Page;
+import utilities.ConfigReader;
 import utilities.Driver;
 
-public class C01_Facebook_Test {
-    @Test(groups = "grup1")
-    public void test1() {
+public class Facebook_Login {
+
+    @Test(groups = {"login","facebook"})
+    public void facebook_login() {
         // https://www.facebook.com/ adresine gidin
-        Driver.getDriver().get("https://www.facebook.com/");
+        Driver.getDriver().get(ConfigReader.getProperty("faceUrl"));
         // POM’a uygun olarak email, sifre kutularini ve giris yap butonunu locate edin
         Facebook_Page facebookPage=new Facebook_Page();
         // Faker class’ini kullanarak email ve sifre degerlerini

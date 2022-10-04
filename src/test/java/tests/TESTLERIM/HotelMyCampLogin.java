@@ -1,4 +1,4 @@
-package tests.Day18_POM;
+package tests.TESTLERIM;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -8,20 +8,13 @@ import pages.HotelMyCamp_Page;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-import java.sql.DriverManager;
-
-public class C03_HotelMyCamp_Test {
-    @Test (groups = "grup2")
-    public void test01() {
-
-
+public class HotelMyCampLogin {
+    @Test (groups = {"login","hotel"})
+    public void hotel_login() {
         //https://www.hotelmycamp.com/ adresine git login butonuna bas
         Driver.getDriver().get(ConfigReader.getProperty("hotelUrl"));
         HotelMyCamp_Page hmcPage = new HotelMyCamp_Page();
-       /*Page class'ındaki locate'lerimize ulaşabilmek için
-         Page classımızdan bir obje oluşturarak, oluşturmuş olduğumuz obje ile
-         page classımızdaki locate'lerimize ulaşabiliriz
-          */
+
         hmcPage.login.click();
         //test data username: manager,
         // test data password : Manager1!

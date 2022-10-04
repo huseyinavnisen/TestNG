@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Login">
+    <test name="Login">
+        <groups>
+            <run>
+                <include name="arama"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="tests.TESTLERIM"></package>
+        </packages>
+    </test>
+</suite>

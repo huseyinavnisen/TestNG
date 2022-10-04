@@ -10,13 +10,13 @@ import utilities.Driver;
 import utilities.TestBaseBeforeMethodAfterMethod;
 
 public class Amazon_Nutella_Test extends TestBaseBeforeMethodAfterMethod {
-
+    Amazon_Page amazon = new Amazon_Page();
     @Test
     public void test1() {
         // https://www.amazon.com/ adresine gidin.
         Driver.getDriver().get(ConfigReader.getProperty("amzUrl"));
         Driver.getDriver().navigate().refresh();
-        Amazon_Page amazon = new Amazon_Page();
+
         // Test : Amazon ana sayfaya gittiginizi test edin
         Assert.assertTrue(amazon.aramaKutusu.isDisplayed());
         // Nutella aratın

@@ -6,7 +6,7 @@ import utilities.Driver;
 
 public class C02_Configuration_Properties {
 
-    @Test
+    @Test(groups = "grup1")
     public void test01() throws InterruptedException {
        // amazon ve facebooka gidelim
         Driver.getDriver().get(ConfigReader.getProperty("amzUrl"));

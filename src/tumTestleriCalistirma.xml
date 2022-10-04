@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!-- TEST TESTLERİ OLUŞURMA
+@Test notasyonunun içine;
+       Örnek 1: @Test (groups="grup1")
+       Örnek 2: @Test (groups={"grup1","grup2"}
+       şeklinde o methodun hangi gruba ait olduğu yazılır.
+       Örnek 2'de ki Test methodu; hem grup1'e hemde grup2'ye dahil edilmiştir.
+-->
+<suite name="Tüm Testler">
+        <test name="regression">
+        <packages>
+            <package name=".*"></package>
+        </packages>
+    </test>
+</suite>
